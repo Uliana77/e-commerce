@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<title>admin</title>
+<meta charset="UTF-8">
+<meta username="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link href="css/adminPages.css" rel="stylesheet" type="text/css">
+
+<body class="w3-black">
+
+<!-- Icon Bar (Sidebar - hidden on small screens) -->
+<nav class="w3-sidebar w3-bar-block w3-small w3-hide-small w3-center">
+    <!-- Avatar image in top left corner -->
+
+    <a href="adminProdDelete.html" class="w3-bar-item w3-button w3-padding-large w3-black">
+        <i class="fa fa-home w3-xxlarge"></i>
+        <p>Delete product</p>
+    </a>
+    <a href="adminAbout.html" class="w3-bar-item w3-button w3-padding-large w3-hover-black">
+        <i class="fa fa-user w3-xxlarge"></i>
+        <p>ABOUT</p>
+    </a>
+    <a href="#photos" class="w3-bar-item w3-button w3-padding-large w3-hover-black">
+        <i class="fa fa-eye w3-xxlarge"></i>
+        <p>PHOTOS</p>
+    </a>
+    <a href="#contact" class="w3-bar-item w3-button w3-padding-large w3-hover-black">
+        <i class="fa fa-envelope w3-xxlarge"></i>
+        <p>CONTACT</p>
+    </a>
+</nav>
+
+<!-- Navbar on small screens (Hidden on medium and large screens) -->
+<div class="w3-top w3-hide-large w3-hide-medium" id="myNavbar">
+    <div class="w3-bar w3-black w3-opacity w3-hover-opacity-off w3-center w3-small">
+        <a href="adminProdDelete.html" class="w3-bar-item w3-button" style="width:25% !important">delete product</a>
+        <a href="adminAbout.html" class="w3-bar-item w3-button" style="width:25% !important">Set ABOUT</a>
+        <a href="stat.html" class="w3-bar-item w3-button" style="width:25% !important">Sales</a>
+        <a href="#contact" class="w3-bar-item w3-button" style="width:25% !important">x3</a>
+    </div>
+</div>
+
+<!-- Page Content -->
+<div class="w3-padding-large" id="main">
+    <!-- Header/Home -->
+    <header class="w3-container w3-padding-32 w3-center w3-black" id="home">
+
+        <div class="w3-container w3-card-4 w3-light-grey">
+            <h2>Hello Admin</h2>
+            <p>Add new product</p>
+
+            <p><label> Name</label>
+                <input class="w3-input w3-border" id="username" type="text"></p>
+
+            <p><label> Price</label>
+                <input class="w3-input w3-border" id="price" type="text"></p>
+
+            <p><label>Details</label>
+                <input class="w3-input w3-border" type="text" username="newText" id="newText">
+
+            <p><label> Add img</label>
+                <input type="file" id="img" username="file" onchange="upload()"/>
+
+                <button onclick="clickMe(), refresh()"> save</button>
+        </div>
+
+
+    </header>
+    <!-- END PAGE CONTENT -->
+</div>
+
+<script src="js/adminPages.js"></script>
+
+</body>
+</html>

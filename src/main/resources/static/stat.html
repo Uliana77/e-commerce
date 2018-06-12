@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <!--Script Reference[1]-->
+  <script src="https://cdn.zingchart.com/zingchart.min.js"></script>
+</head>
+<body>
+  <!--Chart Placement[2]-->
+  <div id="chartDiv"></div>
+  <script>
+    fetch('salesData').then(r => r.json()).then(result => renderChart(result))
+
+    function renderChart(result) {
+        leg = result.map(e => e.product.name)
+        sales = result.map(e => e.sold)
+
+    var chartData = {
+      type: 'bar',  // Specify your chart type here.
+      title: {
+        text: 'My First Chart' // Adds a title to your chart
+      },
+      "scale-x": {values: leg}, // Creates an interactive legend
+      series: [  // Insert your series data here.
+          { values: sales}
+      ]
+    };
+    zingchart.render({ // Render Method[3]
+      id: 'chartDiv',
+      data: chartData,
+      height: 400,
+      width: 600
+    });}
+  </script>
+</body>
+</html>

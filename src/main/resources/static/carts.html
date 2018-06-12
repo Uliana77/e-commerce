@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="UTF-8">
+    <title>Cart</title>
+    <link href="css/cart.css" rel="stylesheet" type="text/css">
+
+
+
+</head>
+
+
+<body>
+<div w3-include-html="content.html"></div>
+<br>
+<script src="js/head.js"></script>
+
+<script src="js/cart.js"></script>
+<script>
+    includeHTML();
+</script>
+
+<div class="allcontent2">
+    <div id="content">
+
+    </div>
+</div>
+<!-- Trigger/Open The Modal -->
+<button class="button button1" id="myBtn">BUY</button>
+<div id="joinPrice">
+
+</div>
+<!-- MODAL WINDOW -->
+<!-- The Modal -->
+<div id="myModal" class="modal1">
+
+    <!-- Modal content -->
+    <div class="m-content">
+        <span class="close">&times;</span>
+        <input class="Line" id="fullName" type="text" placeholder="Full Name"/><br/>
+        <input class="Line" type="text" id="number" placeholder="Phone Number"/><br/>
+        <button class="button button1" onclick="clickBuy()"><a href="carts.html">Send</a></button>
+    </div>
+</div>
+
+
+<script src="js/modalWindow.js"></script>
+
+<div w3-include-html="footer.html">footer</div>
+
+<script>
+
+//    function saveCartProdIn DB() {
+//        fetch('/cart')
+//
+//    }
+    function getAllCart(page) {
+        fetch('/cart', {
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            credentials: "same-origin"
+        })   //1
+            .then(r => r.json())
+        // .then(r => r.content)
+           .then(r => addDiv2(r, 'content', 'imgAdd2', 'mystyle2', 'button2'))
+    }
+
+    getAllCart()
+</script>
+
+
+</body>
+</html>

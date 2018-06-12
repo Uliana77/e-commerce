@@ -1,0 +1,37 @@
+
+.button3:hover {
+    background-color: #555;
+    color: white;
+}
+
+
+.button3 {
+    background: gray;
+    border-radius: 30px;
+    color: pink;
+    height: 10%;
+    padding: 12px 24px;
+    text-align: right;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 13px;
+    margin-left: 10%;
+
+    cursor: pointer;
+}
+
+.mystyle3 {
+    width: 90%;
+    height: 150px;
+    /*border: 3px solid black;*/
+    color: black;
+    font-size: 100%;
+    display: inline-block;
+    margin: 3%;
+}
+
+.imgAdd3 {
+    width: 20%;
+    height: 65%;
+    border: 1px solid lightpink;
+}
